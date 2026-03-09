@@ -1,0 +1,458 @@
+:root {
+    --primary-50:  #FCFAFC;
+    --primary-100: #F3ECF3;
+    --primary-200: #E5D8E7;
+    --primary-300: #D4BED7;
+    --primary-400: #C2A2C6;
+    --primary-500: #AE84B3;
+    --primary-600: #9C68A2;
+    --primary-700: #8B4E92;
+    --primary-800: #7D3A86;
+    --primary-900: #742C7D;
+    --primary-950: #71277A;
+
+    /* Secundary */
+    --secundary-50:  #FBFEFF;
+    --secundary-100: #F0FDFE;
+    --secundary-200: #DFFAFE;
+    --secundary-300: #CAF7FD;
+    --secundary-400: #B3F4FC;
+    --secundary-500: #9CF0FC;
+    --secundary-600: #85EDFB;
+    --secundary-700: #70EAFA;
+    --secundary-800: #5FE7FA;
+    --secundary-900: #54E6F9;
+    --secundary-950: #50E5F9;
+
+    /* Tertiary */
+    --tertiary-50:  #F9FAFB;
+    --tertiary-100: #E9EDEF;
+    --tertiary-200: #D0D9DF;
+    --tertiary-300: #B2C1CA;
+    --tertiary-400: #91A6B2;
+    --tertiary-500: #6E899A;
+    --tertiary-600: #4D6E82;
+    --tertiary-700: #2F566D;
+    --tertiary-800: #16425D;
+    --tertiary-900: #063551;
+    --tertiary-950: #00304D;
+
+    /* Quaternary */
+    --quaternary-50:  #F5FAF2;
+    --quaternary-100: #E1F2D8;
+    --quaternary-200: #CDE9BF;
+    --quaternary-300: #B9E0A5;
+    --quaternary-400: #A5D88C;
+    --quaternary-500: #92CF72;
+    --quaternary-600: #7EC759;
+    --quaternary-700: #6ABE3F;
+    --quaternary-800: #56B526;
+    --quaternary-900: #42AD0C;
+    --quaternary-950: #39A900;
+
+    /* Quinary */
+    --quinary-50:  #ECF5F0;
+    --quinary-100: #D7EADF;
+    --quinary-200: #BDDCCA;
+    --quinary-300: #9FCCB2;
+    --quinary-400: #80BC99;
+    --quinary-500: #60AB7F;
+    --quinary-600: #429B67;
+    --quinary-700: #288D52;
+    --quinary-800: #138241;
+    --quinary-900: #057B36;
+    --quinary-950: #007832;
+
+    /* Senatorial */
+    --senatorial-50:  #FEFDF8;
+    --senatorial-100: #FEF9E6;
+    --senatorial-200: #FEF2CC;
+    --senatorial-300: #FEECB3;
+    --senatorial-400: #FEE599;
+    --senatorial-500: #FEDD80;
+    --senatorial-600: #FED666;
+    --senatorial-700: #FEC74D;
+    --senatorial-800: #FDC833;
+    --senatorial-900: #FDC11A;
+    --senatorial-950: #FDC300;
+
+    /* Neutrals */
+    --neutrals-50:  #FFFFFF;
+    --neutrals-100: #000000;
+    --neutrals-200: #181818;
+    --neutrals-300: #242424;
+    --neutrals-400: #3D3D3D;
+    --neutrals-500: #878787;
+    --neutrals-600: #9F9F9F;
+    --neutrals-700: #B8B8B8;
+    --neutrals-800: #D1D1D1;
+    --neutrals-900: #E9E9E9;
+    --neutrals-950: #F6F6F6;
+
+    /*  =========================
+        TIPOGRAFÍA PRINCIPAL
+        =========================
+    */
+    --main-font: Work Sans, Helvetica, Calibri;
+
+    /*  =========================
+        ESCALA TIPOGRÁFICA
+        =========================
+        Tamaños de texto reutilizables.
+            Se usan unidades rem para
+            mejor adaptación responsive.
+    */
+    --fs-xxxxl: 8.0rem;
+    --fs-xxxl: 6.4rem;
+    --fs-xxl: 4.8rem;
+    --fs-xl: 4.0rem;
+    --fs-lg: 3.2rem;
+    --fs-md: 2.4rem;
+    --fs-sm: 2.0rem;
+    --fs-xs: 1.6rem;
+    --fs-xxs: 1.4rem;
+    --fs-xxxs: 1.2rem;
+}
+
+/*  =========================================================
+    RESET GLOBAL
+    =========================================================
+    Elimina estilos por defecto del navegador
+    para evitar inconsistencias entre navegadores.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  =========================================================
+    CONFIGURACIÓN GENERAL DEL BODY
+    =========================================================
+*/
+body {
+    font-family: var(--main-font);
+    padding-top: 70px; /* espacio para el header fijo */
+}
+
+/*  =========================================================
+    FONDO DE LA PÁGINA
+    =========================================================
+    Se aplica un degradado radial para
+    mejorar el aspecto visual del sistema.
+*/
+body {
+    background: radial-gradient(
+        circle at 15% 50%,
+        var(--tertiary-900) 0%,
+        var(--tertiary-800) 25%,
+        var(--primary-700) 65%,
+        var(--primary-800) 100%
+    );
+
+    min-height: 100vh; /* asegura que cubra toda la pantalla */
+}
+
+/*  =========================================================
+    HEADER PRINCIPAL
+    =========================================================
+    Barra superior fija del sistema.
+*/
+.header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    background: linear-gradient(
+        90deg,
+        var(--primary-700),
+        var(--secundary-700)
+    );
+
+    box-shadow: 
+        0 4px 6px -1px rgb(0 0 0 / 0.1),
+        0 2px 4px -1px rgb(0 0 0 / 0.06);
+}
+
+/*  =========================================================
+    CONTENEDOR IZQUIERDO DEL HEADER
+    =========================================================
+    Contiene el logo y el título.
+*/
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Logo institucional */
+.header__logo {
+    height: 50px;
+    width: 50px;
+}
+
+/* Título del sistema */
+.header__title {
+    color: white;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: var(--main-font);
+}
+
+/*  =========================================================
+    ICONO DE USUARIO
+    =========================================================
+*/
+.header__user {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+/* Icono interactivo */
+.header__user.user-icon {
+    width: 44px;
+    height: 44px;
+
+    cursor: pointer;
+
+    position: relative;
+    z-index: 1002;
+}
+
+/* SVG del icono */
+.header__user.user-icon svg {
+    width: 66px;
+    height: 66px;
+    color: var(--neutrals-100);
+    stroke-width: 1.8;
+}
+
+/*  =========================================================
+    MENÚ DESPLEGABLE DEL USUARIO
+    =========================================================
+*/
+.user-dropdown {
+
+    position: absolute;
+
+    top: 100%;
+    right: 16px;
+
+    width: 162px;
+    height: 157px;
+
+    background: rgba(197, 193, 193, 0.45);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 8px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+
+    overflow: hidden;
+
+    z-index: 1001;
+
+    display: none;
+
+    margin-top: 8px;
+    padding: 6px 0;
+}
+
+/*  =========================================================
+    ESTADO VISIBLE DEL MENÚ
+    =========================================================
+*/
+.user-dropdown-container .user-dropdown.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Permite interacción con el menú */
+.user-dropdown,
+.user-dropdown * {
+    pointer-events: auto;
+}
+
+/* =========================================================
+                LAYOUT INTERNO DEL MENÚ
+    =========================================================
+*/
+.user-dropdown.show ul {
+
+    margin: 0;
+    padding: 6px 0;
+
+    list-style: none;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.user-dropdown.show li {
+    flex: 1;
+}
+
+/* Enlaces del menú */
+.user-dropdown.show li a {
+
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    padding: 0 16px;
+
+    color: var(--neutrals-100);
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+
+    transition: background 0.15s;
+}
+
+/* Efecto hover */
+.user-dropdown.show li a:hover {
+    background-color: var(--tertiary-600);
+}
+
+/* Botón cerrar sesión */
+.user-dropdown.show .logout {
+
+    color: var(--senatorial-950);
+
+    border-top: 1px solid var(--neutrals-100);
+
+    font-weight: 1000;
+}
+
+/*  =========================================================
+    EVITA QUE EL MENÚ SE CORTE
+    =========================================================
+*/
+.header,
+.user-dropdown-container,
+.header__user,
+.user-dropdown {
+    overflow: visible;
+}
+
+/*  =========================================================*/
+
+/* =========================================================
+                CARD MENU PRINCIPAL
+========================================================= */
+
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.card-menu {
+    width: 821px;
+    min-height: 518px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    background: linear-gradient(
+        120deg,
+        var(--primary-800),
+        var(--secundary-700)
+    );
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* =========================================================
+                LADO IZQUIERDO
+========================================================= */
+
+.card-menu__left {
+    color: white;
+    text-align: center;
+    margin: 0 70px;
+}
+
+.card-menu__title {
+    font-size: 24px;
+    font-family: var(--main-font);
+    margin-bottom: 12px;
+}
+
+.card-menu__text {
+    font-size: 20px;
+    font-family: var(--main-font);
+    line-height: 1.5;
+}
+
+/* =========================================================
+                BOTONES
+========================================================= */
+
+.card-menu__right {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 340px; /* corregido de 240 a 340 para coincidir con el tamaño de los botones */
+}
+
+.card-menu__button {
+    width: 340px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.4);
+    background: rgba(255,255,255,0.75);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left: 18px;
+    font-size: 16px;
+    font-family: var(--main-font);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.card-menu__button:hover {
+    background: white;
+    transform: scale(1.02);
+}
+
+/* Íconos dentro de los botones */
+.card-menu__icon {
+    display: flex;
+    align-items: center;
+}
+
+/* Opcional: hacer que el SVG sea más visible sobre fondo claro */
+.card-menu__button svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
